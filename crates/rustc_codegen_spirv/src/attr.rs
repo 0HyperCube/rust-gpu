@@ -650,7 +650,7 @@ fn parse_spirv_attr<'a>(
                     }
                 };
                 sym.attributes.get(&name.name).map_or_else(
-                    || Err((name.span, format!("unknown argument to spirv attribute {:?} of {:?}", name.name, sym.attributes.keys().map(|k|k.to_string()).join(", ")))),
+                    || Err((name.span, format!("unknown argument to spirv attribute {:?} of {:?}", name.name, sym.attributes.keys().map(|k|k.to_string()).collect::<Vec<_>>().join(", ")))),
                     |a| {
                         Ok(match a {
                             SpirvAttribute::Entry(entry) => SpirvAttribute::Entry(
