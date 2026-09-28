@@ -357,7 +357,7 @@ impl Symbols {
                 SpirvAttribute::IntrinsicType(IntrinsicType::RayQueryKhr),
             ),
             (
-                "cooperative_matrix",
+                "cooperative_matrix",//
                 SpirvAttribute::IntrinsicType(IntrinsicType::CooperativeMatrixKhr),
             ),
             ("block", SpirvAttribute::Block),
